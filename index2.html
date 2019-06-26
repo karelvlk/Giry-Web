@@ -1,0 +1,40 @@
+<head>
+
+    <title>Giry</title>
+    <meta http-equiv="Content-Type"  content="text/html; charset=utf8" />
+    <link href="styles2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <script>
+        function menu(){
+            document.getElementById("links").classList.toggle("change");
+            document.getElementById("menu").classList.toggle("change");
+            document.getElementById("bar1").classList.toggle("change");
+            document.getElementById("bar2").classList.toggle("change");
+            document.getElementById("bar3").classList.toggle("change");
+        }
+    </script>
+   </head>
+   
+  
+   <body>
+        <div class="menubar">
+            <div class="logo"><img src="giryLogoSmall.png"></div>
+            <div id="links">
+                <div class="link">DOMŮ</div>
+                <div class="link">O NÁS</div>
+                <div class="link">KONTAKT</div>
+            </div>
+            <div id="menu">MENU</div>
+            <div id="hamburgermenu" onclick="menu()">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+            </div>
+        </div>
+    </body>
+   </body>
+  </html>
+  
