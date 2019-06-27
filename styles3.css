@@ -1,0 +1,117 @@
+body {
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    justify-content: flex-start;;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+    height: 80px;
+    border-bottom: 5px solid black;
+}
+
+#hamburgermenu {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: white;
+    height: 50px;
+    width:50px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+
+.bar {
+    width: 40px;
+    height: 7px;
+    background-color: black;
+    margin: 3px;
+    border-radius: 3px;
+}
+
+#bar1.change {
+    transform: translateY(13px) rotate(45deg);
+    
+}
+
+#bar3.change {
+    transform: translateY(-13px) rotate(135deg);
+}
+
+#bar2.change{
+    transform: scale(0);
+}
+#links {
+    margin-left: 500px;
+    display: none;
+    flex-direction: row;
+    text-align: end;
+    position: absolute;
+    margin-left: 380px;
+}
+
+.link {
+    margin: 30px;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    margin-left: 900px;
+}
+
+
+.link {
+    text-decoration: none;
+    background-image: linear-gradient(black, black);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.link:hover, .link:focus {
+    background-size: 100% 2px;
+}
+
+#links.change {
+    display: flex;   
+    Float: right;
+    transition: .3s;
+}
+#menu.change {
+    display: none;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .heading {
+        width: 350px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .link {
+        margin: 10px;
+    }
+    
+    #links {
+        margin-left: 0px;
+        text-align: center;
+        position: static;
+        flex-direction: column;
+        Float: center;
+    }
+
+}
