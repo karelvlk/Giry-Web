@@ -63,10 +63,10 @@ body {
     margin: 30px;
 }
 
-#menu {
+#menu2 {
     display: flex;
-    align-items: center;
-    margin-left: 900px;
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 
 
@@ -86,14 +86,26 @@ body {
 }
 
 #links.change {
-    display: flex;   
+    display: none;   
     Float: right;
     transition: .3s;
 }
-#menu.change {
+#menu2.change {
     display: none;
 
 }
+
+#links2 {
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+#links2.change {
+    display: flex;
+}
+
 
 @media only screen and (max-width: 768px) {
     .heading {
@@ -101,6 +113,14 @@ body {
     }
 
     #menu {
+        display: none;
+    }
+
+    #menu2 {
+        display: none;
+    }
+
+    #links2 {
         display: none;
     }
 
@@ -114,6 +134,14 @@ body {
         position: static;
         flex-direction: column;
         Float: center;
+    }
+
+    #links2.change {
+        display: none;
+    }
+    
+    #links.change {
+        display: flex;
     }
 
 }
