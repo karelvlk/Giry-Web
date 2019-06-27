@@ -18,14 +18,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
     color: #C0C0C0;
     height: 50px;
     width: 15%;
     margin: auto;
     font-size: 24px;
 
-    
+    background-image: linear-gradient(black, black);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.btn:hover, .btn:focus {
+    background-size: 100% 2px;
 }
 
 #home {
