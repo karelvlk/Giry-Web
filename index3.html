@@ -17,30 +17,35 @@
                 document.getElementById("bar2").classList.toggle("change");
                 document.getElementById("bar3").classList.toggle("change");
             }
+
+            
         </script>
     </head>
    
   
     <body>
-        <div class="heading">
-            <div class="logo"><img src="giryLogoSmall.png"></div>
-            <div id="links2">
-                <a href="#about"><div class="link">O NÁS</div></a>
-                <a href="#projects"><div class="link">PROJEKTY</div></a>
-                <a href="#"><div class="link">KONTAKT</div></a>
-            </div>
-            <div class="link" id="menu2">MENU</div>
-            <div id="hamburgermenu" onclick="menu3()">
-                <div class="bar" id="bar1"></div>
-                <div class="bar" id="bar2"></div>
-                <div class="bar" id="bar3"></div>
-            </div>
+        <div class="navbarcont">
+                <div class="heading">
+                        <div class="logo"><img src="giryLogoSmall.png"></div>
+                        <div id="links2">
+                            <a href="#about"><div class="link">O NÁS</div></a>
+                            <a href="#projects"><div class="link">PROJEKTY</div></a>
+                            <a href="#contact"><div class="link">KONTAKT</div></a>
+                        </div>
+                        <div class="link" id="menu2">MENU</div>
+                        <div id="hamburgermenu" onclick="menu3()">
+                            <div class="bar" id="bar1"></div>
+                            <div class="bar" id="bar2"></div>
+                            <div class="bar" id="bar3"></div>
+                        </div>
+                </div>
         </div>
+
 
         <div id="links">
             <a href="#about"><div class="link">O NÁS</div></a>
             <a href="#projects"><div class="link">PROJEKTY</div></a>
-            <a href="#"><div class="link">KONTAKT</div></a>
+            <a href="#contact"><div class="link">KONTAKT</div></a>
         </div>
         <div id="about" class="textbox">
             <img id="imgGLWs" src="giryVerticalWsmall.png">
@@ -53,10 +58,16 @@
                 And this is some text from our generator.</div>
         </div>
         <div id="projects" class="headinglabel">PROJEKTY</div>
-        <div class="textbox2">
+        <div id="1" class="textbox2">
+                
             <div class="text2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at urna ipsum. Nunc fringilla urna elit, at placerat risus gravida at. Fusce tempor orci id quam eleifend, sed porta ipsum ullamcorper. Phasellus tincidunt ut elit et dapibus. Duis id justo congue, feugiat velit at, euismod ligula. Nunc eu sodales mi. Ut felis ligula, lacinia ut sem ac, sodales iaculis enim. Etiam ut lectus vel nunc congue dignissim id eu elit. Sed sit amet odio turpis. Curabitur gravida feugiat diam, et auctor enim consectetur non. Ut maximus urna quam, sit amet facilisis turpis bibendum id. Donec eu quam sed lacus pretium elementum. Maecenas purus justo, bibendum eu tincidunt ultrices, ornare id lacus. Vestibulum pellentesque, velit at bibendum pretium, nunc dui fringilla nisi, ac laoreet lacus ligula at enim. Aenean pulvinar arcu quis dui commodo, nec blandit ligula auctor. Maecenas blandit dolor ac massa ultrices lobortis.
             </div>
         </div>
+        <div id="contact" class="textbox">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
     </body>
 </html>
