@@ -24,17 +24,26 @@
                     var $nav2 = $(".navbarcont")
                     var bar = $(".bar")
                     var about = $("#about")
+                    var contact = $("#contact")
+                    var project = $("#projects")
                     var link = $("a")
                     var underlineLink = $(".link")
                     var menu = $("#menu2")
                     var logo = $(".logo")
-                    $nav.toggleClass('scrolled', $(this).scrollTop() > about.height());
-                    $nav2.toggleClass('scrolled', $(this).scrollTop() > about.height());
-                    bar.toggleClass('scrolled', $(this).scrollTop() > about.height());
-                    link.toggleClass('scrolled', $(this).scrollTop() > about.height());
-                    underlineLink.toggleClass('scrolled', $(this).scrollTop() > about.height());
-                    menu.toggleClass('scrolled', $(this).scrollTop() > about.height());
-                    logo.toggleClass('scrolled', $(this).scrollTop() > about.height());
+                    var isNavInverted =  (
+                        ($(this).scrollTop() > about.height()) &&
+                        ($(this).scrollTop() < (about.height() + project.height()))
+                    );
+                    console.log(isNavInverted)
+                    console.log($(this).scrollTop(), about.height(), (about.height() + project.height()))
+
+                    $nav.toggleClass('scrolled', isNavInverted);
+                    $nav2.toggleClass('scrolled', isNavInverted);
+                    bar.toggleClass('scrolled', isNavInverted);
+                    link.toggleClass('scrolled', isNavInverted);
+                    underlineLink.toggleClass('scrolled', isNavInverted);
+                    menu.toggleClass('scrolled',isNavInverted);
+                    logo.toggleClass('scrolled', isNavInverted);
                 });
             });
         </script>
@@ -75,14 +84,17 @@
                 Is post each that just leaf no. He connection interested so we an sympathize advantages. To said is it shed want do. Occasional middletons everything so to. Have spot part for his quit may. Enable it is square my an regard. Often merit stuff first oh up hills as he.
                 And this is some text from our generator.</div>
         </div>
-        <div id="projects" class="headinglabel">PROJEKTY</div>
-        <div id="1" class="textbox2">
-                
-            <div class="text2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at urna ipsum. Nunc fringilla urna elit, at placerat risus gravida at. Fusce tempor orci id quam eleifend, sed porta ipsum ullamcorper. Phasellus tincidunt ut elit et dapibus. Duis id justo congue, feugiat velit at, euismod ligula. Nunc eu sodales mi. Ut felis ligula, lacinia ut sem ac, sodales iaculis enim. Etiam ut lectus vel nunc congue dignissim id eu elit. Sed sit amet odio turpis. Curabitur gravida feugiat diam, et auctor enim consectetur non. Ut maximus urna quam, sit amet facilisis turpis bibendum id. Donec eu quam sed lacus pretium elementum. Maecenas purus justo, bibendum eu tincidunt ultrices, ornare id lacus. Vestibulum pellentesque, velit at bibendum pretium, nunc dui fringilla nisi, ac laoreet lacus ligula at enim. Aenean pulvinar arcu quis dui commodo, nec blandit ligula auctor. Maecenas blandit dolor ac massa ultrices lobortis.
-            </div>
+        <div id="projects">
+            <div id="1" class="textbox2">
+                    <div class="headinglabel">PROJEKTY</div>
+                    <div class="text2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at urna ipsum. Nunc fringilla urna elit, at placerat risus gravida at. Fusce tempor orci id quam eleifend, sed porta ipsum ullamcorper. Phasellus tincidunt ut elit et dapibus. Duis id justo congue, feugiat velit at, euismod ligula. Nunc eu sodales mi. Ut felis ligula, lacinia ut sem ac, sodales iaculis enim. Etiam ut lectus vel nunc congue dignissim id eu elit. Sed sit amet odio turpis. Curabitur gravida feugiat diam, et auctor enim consectetur non. Ut maximus urna quam, sit amet facilisis turpis bibendum id. Donec eu quam sed lacus pretium elementum. Maecenas purus justo, bibendum eu tincidunt ultrices, ornare id lacus. Vestibulum pellentesque, velit at bibendum pretium, nunc dui fringilla nisi, ac laoreet lacus ligula at enim. Aenean pulvinar arcu quis dui commodo, nec blandit ligula auctor. Maecenas blandit dolor ac massa ultrices lobortis.
+                    </div>
+                </div>
         </div>
+        
         <div id="contact" class="textbox">
+            <div id="blockbox">
                 <div class="block">
                     <div class="headContact"><i class="far fa-building"></i></div>
                     <div class="textContact"> IČO: &emsp; 05548411 </div>
@@ -100,5 +112,8 @@
                     <div class="textContact"><i class="far fa-envelope"></i> &ensp; sedlar[zavináč]giry.cz  </div>
                 </div>
             </div>
+            <div class="end">Giry</div>
+            <div id="line"></div>
+        </div>
     </body>
 </html>
