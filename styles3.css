@@ -24,6 +24,12 @@ body {
     position: fixed;
 }
 
+.navbarcont.scrolled {
+    height: 98px;
+    background-color: #202020;
+    transition: background-color 200ms linear;
+}
+
 
 .heading {
     top:0;
@@ -38,12 +44,29 @@ body {
     padding-top: 18px;
 }
 
+.heading.scrolled {
+    background-color: #202020 !important;
+    transition: background-color 200ms linear;
+}
+
+.logo {
+    background-image: url("giryLogoSmall.png");
+    height: 60px;
+    width: 155px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.logo.scrolled {
+    background-image: url("giryLogoSmallW.png");
+}
+
 #hamburgermenu {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: flex-end;
-    background-color: white;
+    background-color: none;
     height: 50px;
     width:50px;
     cursor: pointer;
@@ -59,6 +82,10 @@ body {
     border-radius: 3px;
 }
 
+.bar.scrolled {
+    background-color: white;
+}
+
 #bar1.change {
     transform: translateY(13px) rotate(45deg);
     
@@ -71,6 +98,7 @@ body {
 #bar2.change{
     transform: scale(0);
 }
+
 #links {
     /*margin-left: 380;*/
     right: 400px;
@@ -87,6 +115,10 @@ a {
     color: black;
 }
 
+a.scrolled {
+    color: white;
+}
+
 #menu2 {
     display: flex;
     flex-grow: 1;
@@ -94,8 +126,8 @@ a {
     color: black;
 }
 
-a {
-    z-index: 1;
+#menu2.scrolled {
+    color: white;
 }
 
 .link {
@@ -108,6 +140,10 @@ a {
     transition: background-size .3s;
     cursor: pointer;
     padding-bottom: 5px;
+}
+
+.link.scrolled {
+    background-image: linear-gradient(white, white);
 }
 
 .link:hover, .link:focus {
@@ -169,8 +205,10 @@ a {
 }
 
 .headinglabel {
+    padding-top: 80px;
     width: 1200px;
-    height: 150px;
+    height: 80px;
+    margin-bottom: 40px;
     font-size: 36px;
     background-color: white;
     color: black;
@@ -194,6 +232,7 @@ a {
 
 .textbox2 {
     width: 1200px;
+    height: 300px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -204,17 +243,20 @@ a {
 }
 
 #contact {
-    height: 400px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
 .block {
-    width: 300px;
-    margin: 30px;
-    height: 200px;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 300px;
+    background-color: none;
 }
 
 .text2 {
@@ -224,6 +266,26 @@ a {
     text-align: justify;
 }
 
+.headContact {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 40px;
+}
+
+.textContact {
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+}
 
 @media only screen and (max-width: 768px) {
     .heading {

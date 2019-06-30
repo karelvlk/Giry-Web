@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+        <script src="jquery-3.4.1.min.js"></script>
         <script>
             function menu3(){
                 document.getElementById("links").classList.toggle("change");
@@ -18,7 +18,25 @@
                 document.getElementById("bar3").classList.toggle("change");
             }
 
-            
+            $(function () {
+                $(document).scroll(function () {
+                    var $nav = $(".heading");
+                    var $nav2 = $(".navbarcont")
+                    var bar = $(".bar")
+                    var about = $("#about")
+                    var link = $("a")
+                    var underlineLink = $(".link")
+                    var menu = $("#menu2")
+                    var logo = $(".logo")
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > about.height());
+                    $nav2.toggleClass('scrolled', $(this).scrollTop() > about.height());
+                    bar.toggleClass('scrolled', $(this).scrollTop() > about.height());
+                    link.toggleClass('scrolled', $(this).scrollTop() > about.height());
+                    underlineLink.toggleClass('scrolled', $(this).scrollTop() > about.height());
+                    menu.toggleClass('scrolled', $(this).scrollTop() > about.height());
+                    logo.toggleClass('scrolled', $(this).scrollTop() > about.height());
+                });
+            });
         </script>
     </head>
    
@@ -26,7 +44,7 @@
     <body>
         <div class="navbarcont">
                 <div class="heading">
-                        <div class="logo"><img src="giryLogoSmall.png"></div>
+                        <div class="logo"></div>
                         <div id="links2">
                             <a href="#about"><div class="link">O NÁS</div></a>
                             <a href="#projects"><div class="link">PROJEKTY</div></a>
@@ -65,9 +83,22 @@
             </div>
         </div>
         <div id="contact" class="textbox">
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
+                <div class="block">
+                    <div class="headContact"><i class="far fa-building"></i></div>
+                    <div class="textContact"> IČO: &emsp; 05548411 </div>
+                    <div class="textContact"> DIČ: CZ05548411 </div>
+                </div>
+                <div class="block">
+                    <div class="headContact"><i class="fas fa-map-marked-alt"></i></div>
+                    <div class="textContact"> Denisova 1526/10 </div>
+                    <div class="textContact"> 787 01 Šumperk  </div>
+                </div>
+                <div class="block">
+                    <div class="headContact"><i class="far fa-address-book"></i></div>
+                    <div class="textContact"> Ing. Pavel Sedlář </div>
+                    <div class="textContact"><i class="fas fa-mobile-alt"></i> &emsp; &ensp; +420 603 496 850 &emsp; &ensp;  </div>
+                    <div class="textContact"><i class="far fa-envelope"></i> &ensp; sedlar[zavináč]giry.cz  </div>
+                </div>
             </div>
     </body>
 </html>
