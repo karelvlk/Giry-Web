@@ -311,8 +311,24 @@ a.scrolled {
 }
 
 @media only screen and (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
     .heading {
-        width: 350px;
+        width: 100%;
+        border-bottom-style: solid;
+        border-color: black;
+    }
+
+    #hamburgermenu {
+        margin-right: 10px;
+    }
+
+    .logo {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     #menu {
@@ -325,16 +341,31 @@ a.scrolled {
 
     #links2 {
         display: none;
+        width: 350px;
+    }
+
+    #links {
+        margin-top: 100px;
+        background-color: white;
     }
 
     .link {
         margin: 10px;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-bottom-color: black;
+        width: 350px;
+
+    }
+
+    .link.change {
+        color: black;
     }
 
     #links {
         margin-left: 0px;
         text-align: center;
-        position: static;
+        position: fixed;
         flex-direction: column;
         Float: center;
     }
@@ -347,4 +378,68 @@ a.scrolled {
         display: flex;
     }
 
+
+
+    #about {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 800px;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    .textbox {
+        height: max-content;
+    }
+
+    .headinglabel {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+    }
+
+    #projects {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        z-index: 1;
+    }
+
+    .textbox2{
+        height: max-content;
+    }
+
+    .text2 {
+        width: 90%;
+        margin: 0px;
+    }
+
+    #contact {
+        width: 100%;
+        height: max-content;
+        z-index: 2;
+        
+    }
+
+    #blockbox {
+        display: flex;
+        flex-direction: column;
+        height: 1000px;
+    }
+    
+    .end {
+        width: 100%;
+    }
+
+    #line {
+        width: 350px;
+    }
 }
