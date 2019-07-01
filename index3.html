@@ -46,11 +46,22 @@
                     logo.toggleClass('scrolled', isNavInverted);
                 });
             });
+
+            function getPageHeight() {
+                var height = document.body.clientHeight;
+                console.log("test")
+                console.log(height)
+                height = height - 100;
+                console.log(height +"px");
+                document.getElementById('about').style.height= height + "px";
+                document.getElementById('projects').style.height= height + "px";
+                document.getElementById('contact').style.height= height + "px";
+            }
         </script>
     </head>
    
   
-    <body>
+    <body onload="getPageHeight()">
         <div class="navbarcont">
                 <div class="heading">
                         <div class="logo"></div>
@@ -102,17 +113,18 @@
                 </div>
                 <div class="block">
                     <div class="headContact"><i class="fas fa-map-marked-alt"></i></div>
+                    <div class="textContact"> GIRY System s.r.o. </div>
                     <div class="textContact"> Denisova 1526/10 </div>
                     <div class="textContact"> 787 01 Šumperk  </div>
                 </div>
                 <div class="block">
                     <div class="headContact"><i class="far fa-address-book"></i></div>
                     <div class="textContact"> Ing. Pavel Sedlář </div>
-                    <div class="textContact"><i class="fas fa-mobile-alt"></i> &emsp; &ensp; +420 603 496 850 &emsp; &ensp;  </div>
+                    <div class="textContact"><i class="fas fa-mobile-alt"></i> &emsp; +420 603 496 850 &emsp; &ensp;  </div>
                     <div class="textContact"><i class="far fa-envelope"></i> &ensp; sedlar[zavináč]giry.cz  </div>
                 </div>
             </div>
-            <div class="end">Giry</div>
+            <div class="end">Giry 2019 ©</div>
             <div id="line"></div>
         </div>
     </body>
