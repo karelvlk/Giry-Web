@@ -17,7 +17,8 @@
                 document.getElementById("bar2").classList.toggle("change");
                 document.getElementById("bar3").classList.toggle("change");
                 document.getElementById("navbarcontid").classList.toggle("change");
-                
+                var width = document.body.clientWidth;
+            
             }
 
             $(function () {
@@ -63,6 +64,7 @@
                 }
                 
             }
+
         </script>
     </head>
    
@@ -72,9 +74,9 @@
                 <div class="heading">
                         <div class="logo"></div>
                         <div id="links2">
-                            <a href="#about"><div class="link">O NÁS</div></a>
-                            <a href="#projects"><div class="link">PROJEKTY</div></a>
-                            <a href="#contact"><div class="link">KONTAKT</div></a>
+                            <a href="#about"><div class="link" onClick="scroll()">O NÁS</div></a>
+                            <a href="#projects"><div class="link" onClick="scroll()">PROJEKTY</div></a>
+                            <a href="#contact"><div class="link" onClick="scroll()">KONTAKT</div></a>
                         </div>
                         <div class="link" id="menu2">MENU</div>
                         <div id="hamburgermenu" onclick="menu3()">
@@ -89,7 +91,7 @@
         <div id="links">
             <a href="#about"><div class="link">O NÁS</div></a>
             <a href="#projects"><div class="link">PROJEKTY</div></a>
-            <a href="#contact"><div class="link">KONTAKT</div></a>
+            <a href="#blockbox"><div class="link">KONTAKT</div></a>
         </div>
         <div id="about" class="textbox">
             <img id="imgGLWs" src="giryVerticalWsmall.png">

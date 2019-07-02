@@ -308,7 +308,7 @@ a.scrolled {
     background-color: white;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
     body {
         display: flex;
         justify-content: center;
@@ -354,7 +354,7 @@ a.scrolled {
     }
 
     #links {
-        margin-top: 101px;
+        margin-top: 105px;
         background-color: white;
     }
 
@@ -460,7 +460,7 @@ a.scrolled {
     #blockbox {
         display: flex;
         flex-direction: column;
-        height: 1000px;
+        height: 1100px;
     }
     
     .end {
@@ -470,5 +470,9 @@ a.scrolled {
 
     #line {
         width: 350px;
+    }
+
+    element.style {
+        height: 1200px;
     }
 }
