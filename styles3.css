@@ -101,8 +101,7 @@ body {
 
 #links {
     /*margin-left: 380;*/
-    right: 400px;
-    right: 22%;
+    
     display: none;
     flex-direction: row;
     text-align: end;
@@ -228,7 +227,6 @@ a.scrolled {
 }
 
 #projects {
-    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,6 +314,16 @@ a.scrolled {
         justify-content: center;
     }
 
+    .navbarcont {
+        top: 0;
+    }
+
+    
+    #navbarcontid.change {
+        height: 230px;
+
+    }
+
     .heading {
         width: 100%;
         border-bottom-style: solid;
@@ -342,10 +350,11 @@ a.scrolled {
     #links2 {
         display: none;
         width: 350px;
+        z-index: 2;
     }
 
     #links {
-        margin-top: 100px;
+        margin-top: 101px;
         background-color: white;
     }
 
@@ -362,6 +371,10 @@ a.scrolled {
         color: black;
     }
 
+    .link.scrolled{
+        color: black;
+    }
+
     #links {
         margin-left: 0px;
         text-align: center;
@@ -375,7 +388,9 @@ a.scrolled {
     }
 
     #links.change {
-        display: flex;
+        top: 0;
+        display: block;
+        z-index: 5;
     }
 
 
@@ -386,6 +401,7 @@ a.scrolled {
         align-items: center;
         justify-content: center;
         height: 800px;
+        z-index: -1;
     }
 
     .text {
@@ -393,24 +409,30 @@ a.scrolled {
     }
 
     .textbox {
-        height: max-content;
+        height: 1000px;
     }
 
+    #about.textbox{
+        height: 900px;
+    }
     .headinglabel {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 0px;
+        padding: 0;
+        
     }
 
     #projects {
         width: 100%;
+        height: 800px;
         display: flex;
         align-items: center;
         justify-content: center;
         height: auto;
-        z-index: 1;
+
+      
     }
 
     .textbox2{
@@ -420,15 +442,21 @@ a.scrolled {
     .text2 {
         width: 90%;
         margin: 0px;
+        padding: 0;
+        height: 600px;
     }
 
     #contact {
         width: 100%;
         height: max-content;
-        z-index: 2;
+        z-index: auto;
         
     }
 
+    #contact.textbox {
+        padding-top: 20px;;
+        
+    }
     #blockbox {
         display: flex;
         flex-direction: column;
@@ -436,7 +464,8 @@ a.scrolled {
     }
     
     .end {
-        width: 100%;
+        margin-top: 20px;
+        width: 100px;
     }
 
     #line {

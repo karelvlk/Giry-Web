@@ -16,6 +16,8 @@
                 document.getElementById("bar1").classList.toggle("change");
                 document.getElementById("bar2").classList.toggle("change");
                 document.getElementById("bar3").classList.toggle("change");
+                document.getElementById("navbarcontid").classList.toggle("change");
+                
             }
 
             $(function () {
@@ -49,20 +51,24 @@
 
             function getPageHeight() {
                 var height = document.body.clientHeight;
-                console.log("test")
+                var width = document.body.clientWidth;
+                console.log("test", width)
                 console.log(height)
                 height = height - 100;
                 console.log(height +"px");
-                document.getElementById('about').style.height= height + "px";
-                document.getElementById('projects').style.height= height + "px";
-                document.getElementById('contact').style.height= height + "px";
+                if (width > 1200) {
+                    document.getElementById('about').style.height= height + "px";
+                    document.getElementById('projects').style.height= height + "px";
+                    document.getElementById('contact').style.height= height + "px";
+                }
+                
             }
         </script>
     </head>
    
   
     <body onload="getPageHeight()">
-        <div class="navbarcont">
+        <div class="navbarcont" id="navbarcontid">
                 <div class="heading">
                         <div class="logo"></div>
                         <div id="links2">
