@@ -6,10 +6,11 @@
         <link href="styles3.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" />
         <script src="jquery-3.4.1.min.js"></script>
         <script>
-            function menu3(){
+            var width = document.documentElement.clientWidth	
+            function menu3() {
                 document.getElementById("links").classList.toggle("change");
                 document.getElementById("links2").classList.toggle("change");
                 document.getElementById("menu2").classList.toggle("change");
@@ -17,12 +18,23 @@
                 document.getElementById("bar2").classList.toggle("change");
                 document.getElementById("bar3").classList.toggle("change");
                 document.getElementById("navbarcontid").classList.toggle("change");
-                var width = document.body.clientWidth;
+                
             
+            }
+
+            function toggle() {
+                document.getElementById("links").classList.toggle("change");
+                document.getElementById("links2").classList.toggle("change");
+                document.getElementById("menu2").classList.toggle("change");
+                document.getElementById("bar1").classList.toggle("change");
+                document.getElementById("bar2").classList.toggle("change");
+                document.getElementById("bar3").classList.toggle("change");
+                document.getElementById("navbarcontid").classList.toggle("change");
             }
 
             $(function () {
                 $(document).scroll(function () {
+                    var height = $(window).width()
                     var $nav = $(".heading");
                     var $nav2 = $(".navbarcont")
                     var bar = $(".bar")
@@ -33,10 +45,18 @@
                     var underlineLink = $(".link")
                     var menu = $("#menu2")
                     var logo = $(".logo")
-                    var isNavInverted =  (
-                        ($(this).scrollTop() > about.height()) &&
-                        ($(this).scrollTop() < (about.height() + project.height()))
-                    );
+                    var isNavInverted
+                    if (width > 1200) {
+                        isNavInverted =  (
+                            ($(this).scrollTop() > about.height()) &&
+                            ($(this).scrollTop() < (about.height() + project.height()))
+                        );
+                    } else {
+                        isNavInverted =  (
+                            ($(this).scrollTop() > about.height()) &&
+                            ($(this).scrollTop() < (about.height() + project.height() + 100))
+                        );
+                    }
                     console.log(isNavInverted)
                     console.log($(this).scrollTop(), about.height(), (about.height() + project.height()))
 
@@ -89,12 +109,12 @@
 
 
         <div id="links">
-            <a href="#about"><div class="link">O NÁS</div></a>
-            <a href="#projects"><div class="link">PROJEKTY</div></a>
-            <a href="#blockbox"><div class="link">KONTAKT</div></a>
+            <a href="#about"><div class="link" onClick="toggle()">O NÁS</div></a>
+            <a href="#projects"><div class="link" onClick="toggle()">PROJEKTY</div></a>
+            <a href="#contact"><div class="link" onClick="toggle()">KONTAKT</div></a>
         </div>
         <div id="about" class="textbox">
-            <img id="imgGLWs" src="giryVerticalWsmall.png">
+            <img id="imgGLWs" src="giryAbout.png">
             <div class="text">This tool was created because we wanted random text for our web designs. When we show a design to a client we want to have some text that doesn't mean anything in particular just to indicate that "here is where the text will be". So why shouldn't we just copy-paste a single sentence and get a block of text ? Have a look at the following examples:
 
                 This is some dummy text. This is some dummy text. This is some dummy text. This is some dummy text. This is some dummy text. This is some dummy text.	This is some dummy text. This is some dummy text. This is some dummy text. This is some dummy text.
@@ -113,6 +133,7 @@
         </div>
         
         <div id="contact" class="textbox">
+            <div id=portC></div>
             <div id="blockbox">
                 <div class="block">
                     <div class="headContact"><i class="far fa-building"></i></div>
