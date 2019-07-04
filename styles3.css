@@ -308,12 +308,24 @@ a.scrolled {
     background-color: white;
 }
 
+#box {
+    width: 100%;
+}
+
 @media only screen and (max-width: 1200px) {
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    #box {
+        width: 100%;
+        position: static;
+    }
+
     body {
         display: flex;
         justify-content: center;
-        max-width: 100%;
-        overflow-x: hidden;
     }
 
     .navbarcont {
@@ -406,6 +418,11 @@ a.scrolled {
         justify-content: center;
         height: 800px;
         z-index: -1;
+    }
+
+    #imgGLWs {
+        margin-top: 0px;
+        margin-bottom: 100px;
     }
 
     .text {
