@@ -203,7 +203,7 @@ a.scrolled {
     text-align: justify;
 }
 
-.headinglabel {
+#headinglabel {
     width: 1200px;
     height: 80px;
     margin-bottom: 60px;
@@ -213,6 +213,7 @@ a.scrolled {
     font-weight: bold;
     display: flex;
     align-items: center;
+    
 }
 
 .headinglabel2 {
@@ -332,8 +333,6 @@ a.scrolled {
 ::-webkit-scrollbar-thumb:hover {
     background: #696969; 
   }
-
-
 
 @media only screen and (max-width: 1200px) {
     html, body {
