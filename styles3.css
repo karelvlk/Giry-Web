@@ -230,6 +230,7 @@ a.scrolled {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 3000px;
 }
 
 .textbox2 {
@@ -310,7 +311,29 @@ a.scrolled {
 
 #box {
     width: 100%;
+    height: max-content;
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+    background: linear-gradient(to right, #000000 0%, #333333 100% );
+    border-style: solid;
+    border-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 20px;
+    background: #000000;
+    width: 5px;
+    outline: 1px solid slategrey;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #696969; 
+  }
+
+
 
 @media only screen and (max-width: 1200px) {
     html, body {

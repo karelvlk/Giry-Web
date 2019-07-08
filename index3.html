@@ -2,6 +2,7 @@
     <head>
 
         <title>Giry</title>
+        <link rel = "shortcut icon" href = "titleLogo.png" />
         <meta http-equiv="Content-Type"  content="text/html; charset=utf8" />
         <link href="styles3.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -11,6 +12,13 @@
         <script src="jquery-3.4.1.min.js"></script>
         <script>
             var width = document.documentElement.clientWidth	
+
+            $(document).ready(function () {
+                $('html, body').animate({
+                    scrollTop: $('#about').offset().top
+                }, 100);
+            });
+
             function menu3() {
                 document.getElementById("links").classList.toggle("change");
                 document.getElementById("links2").classList.toggle("change");
@@ -72,6 +80,7 @@
             });
 
             function getPageHeight() {
+                menu3()
                 var height = document.body.clientHeight;
                 var width = document.body.clientWidth;
                 console.log("test", width)
