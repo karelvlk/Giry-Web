@@ -6,14 +6,77 @@
         <meta http-equiv="Content-Type"  content="text/html; charset=utf8" />
         <link href="styles3.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" />
         <meta name="format-detection" content="telephone=no">
         <script src="jquery-3.4.1.min.js"></script>
         <script>
             var width = document.documentElement.clientWidth	
+            function getPageHeight() {
+                
+                var height = document.body.clientHeight;
+                var width = document.body.clientWidth;
+                console.log("test", width)
+                console.log(height)
+                heightcanvas = height
+                height = height - 100;
+                  
+                if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
+                {
+                    console.log('Opera');
+                }
+                else if(navigator.userAgent.indexOf("Chrome") != -1 )
+                {
+                    console.log('Chrome');
+                }
+                else if(navigator.userAgent.indexOf("Safari") != -1)
+                {
+                    console.log('Safari');
+                }
+                else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+                {
+                    console.log('Firefox');
+                }
+                else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+                {
+                    console.log('IE'); 
+                    
+                document.getElementById('animation').style.margin = "-50%";
+                document.getElementById('animation').style.height = 0 + "px";
+                document.getElementById('navbarcontid').style.display = "none";
+                }  
+                else 
+                {
+                    console.log('unknown');
+                }
 
+                console.log(height +"px");
+                if (width > 1200) {
+                    menu3()
+                    document.getElementById('animation').style.display = "flex";
+                    document.getElementById('about').style.height= height + "px";
+                    document.getElementById('projects').style.height= height + "px";
+                    document.getElementById('contact').style.height= height + "px";
+                    document.getElementById('animation').style.height= heightcanvas + "px";
+                    document.getElementById('animation').style.width= width + "px";
+                    ani()
+                } else {
+                    document.getElementById('animation').style.display = "none";
+                }
+                function ani(){
+                  
+                    setTimeout(
+                        function(){
+                            document.getElementById('hamburgermenu').style.display = "flex";
+                            document.getElementById('logoid').style.display = "flex";
+                            document.getElementById('animation').style.display = "none"; 
+                        }, 2800);
+                    
+                
+                }
+                
+            }
             $(document).ready(function () {
                 $('html, body').animate({
                     scrollTop: $('#about').offset().top
@@ -30,6 +93,15 @@
                 document.getElementById("navbarcontid").classList.toggle("change");
                 
             
+            }
+
+            function animationChanges () {
+                document.getElementById("bar1").style.display = "none"
+                document.getElementById("bar2").style.display = "none"
+                document.getElementById("bar1").style.display = "none"
+                document.getElementById("navbarcontid").style.display = "none"
+                document.getElementById("menu2").style.display = "none"
+                
             }
 
             function toggle() {
@@ -80,67 +152,8 @@
                 });
             });
 
-            function getPageHeight() {
-                var height = document.body.clientHeight;
-                var width = document.body.clientWidth;
-                console.log("test", width)
-                console.log(height)
-                heightcanvas = height
-                height = height - 100;
-                
-                if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
-                {
-                    console.log('Opera');
-                }
-                else if(navigator.userAgent.indexOf("Chrome") != -1 )
-                {
-                    console.log('Chrome');
-                }
-                else if(navigator.userAgent.indexOf("Safari") != -1)
-                {
-                    console.log('Safari');
-                }
-                else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
-                {
-                    console.log('Firefox');
-                }
-                else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-                {
-                    console.log('IE'); 
-                document.getElementById('animation').style.display = "none";
-                document.getElementById('navbarcontid').style.display = "none";
-                }  
-                else 
-                {
-                    console.log('unknown');
-                }
+            
 
-                console.log(height +"px");
-                if (width > 1200) {
-                    menu3()
-                    document.getElementById('about').style.height= height + "px";
-                    document.getElementById('projects').style.height= height + "px";
-                    document.getElementById('contact').style.height= height + "px";
-                    document.getElementById('animation').style.height= heightcanvas + "px";
-                    document.getElementById('animation').style.width= width + "px";
-                    ani()
-                } else {
-                    document.getElementById('animation').style.display = "none";
-                }
-                function ani(){
-                    
-                    setTimeout(
-                        function(){
-                            document.getElementById('animation').style.display = "none"; 
-                        }, 2800);
-                    
-                }
-               
-            }
-            
-                
-            
-            
         </script>
     </head>
    
@@ -152,7 +165,7 @@
         </div>
         <div class="navbarcont" id="navbarcontid">
                 <div class="heading">
-                        <div class="logo"></div>
+                        <div class="logo" id="logoid"></div>
                         <div id="links2">
                             <a href="#about"><div class="link" onClick="scroll()">O NÁS</div></a>
                             <a href="#projects"><div class="link" onClick="scroll()">PROJEKTY</div></a>
@@ -186,22 +199,23 @@
             </div>
             <div id="projects">
                 <div id="1" class="textbox2">
-                        <div id="headinglabel">PROJEKTY</div>
+                        <div class="headinglabel">PROJEKTY</div>
                         <div class="text2">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at urna ipsum. Nunc fringilla urna elit, at placerat risus gravida at. Fusce tempor orci id quam eleifend, sed porta ipsum ullamcorper. Phasellus tincidunt ut elit et dapibus. Duis id justo congue, feugiat velit at, euismod ligula. Nunc eu sodales mi. Ut felis ligula, lacinia ut sem ac, sodales iaculis enim. Etiam ut lectus vel nunc congue dignissim id eu elit. Sed sit amet odio turpis. Curabitur gravida feugiat diam, et auctor enim consectetur non. Ut maximus urna quam, sit amet facilisis turpis bibendum id. Donec eu quam sed lacus pretium elementum. Maecenas purus justo, bibendum eu tincidunt ultrices, ornare id lacus. Vestibulum pellentesque, velit at bibendum pretium, nunc dui fringilla nisi, ac laoreet lacus ligula at enim. Aenean pulvinar arcu quis dui commodo, nec blandit ligula auctor. Maecenas blandit dolor ac massa ultrices lobortis.
                         </div>
                     </div>
             </div>
             
-            <div id="contact" class="textbox3">
+            <div id="contact" class="textbox">
                 <div id=portC></div>
                 <div id="blockbox">
                     <div class="block">
                         <div class="headContact"><i class="far fa-building"></i></div>
                         <div class="textContact"> IČO: &emsp; 05548411 </div>
                         <div class="textContact"> DIČ: CZ05548411 </div>
+                        <div class="textContact"><i class="fas fa-money-check-alt"></i>&ensp;000000-1234567890/0600</div>
                     </div>
-                    <div class="block" id="mapblock">
+                    <div class="block">
                         <div class="headContact"><i class="fas fa-map-marked-alt"></i></div>
                         <div class="textContact"> GIRY System s.r.o. </div>
                         <div class="textContact"> Denisova 1526/10 </div>
@@ -211,13 +225,12 @@
                         <div class="headContact"><i class="far fa-address-book"></i></div>
                         <div class="textContact"> Ing. Pavel Sedlář </div>
                         <div class="textContact"><i class="fas fa-mobile-alt"></i> &emsp; +420 603 496 850 &emsp; &ensp;  </div>
-                        <div class="textContact"><i class="far fa-envelope"></i> &ensp; sedlar[zavináč]giry.cz</div>
+                        <div class="textContact"><i class="far fa-envelope"></i> &ensp; sedlar[zavináč]giry.cz  </div>
                     </div>
                 </div>
-                
-                <div class="end">© Giry 2019 </div>
-                
-                <div class="logo2"></div>
+                <div class="end">Giry 2019 ©</div>
+                <div id="line"></div>
+                <div class="loadImg"></div>
             </div>
         </div>
     </body>

@@ -1,23 +1,33 @@
+
 html {
     scroll-behavior: smooth;
     
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    justify-content: flex-start;;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
     
 }
 
 #animation {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 50px;
-    position: relative;
-    color: black;
-    top: 0;
-    position: fixed;
-    z-index: 10;
-    background-color: white;
+    height: 1000px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
     justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    color: black;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    padding: 0px;
     animation: text 3s 1;
     letter-spacing: 15px;
     font-weight: 900;
@@ -47,30 +57,17 @@ html {
 @keyframes text {
     0%{
         color: white;
-        margin-bottom: 40%;
         display: none;
         filter: blur(10px);
     }
 
     30% {
         letter-spacing: 25px;
-        margin-bottom: -40px;
         display: flex;
         filter: blur(0px);
     }
 
    
-}
-
-body {
-    font-family: 'Comfortaa', cursive;
-    display: flex;
-    justify-content: flex-start;;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    
 }
 
 .navbarcont {
@@ -81,7 +78,7 @@ body {
     align-items: center;
     background-color: white;
     position: fixed;
-    z-index: 1;
+ 
 }
 
 .navbarcont.scrolled {
@@ -117,9 +114,8 @@ body {
     padding-left: 0px;
 }
 
-.logo2 {
-    background-image: url("giryLogoSmallW.png");
-    display: none;
+#logoid {
+  display: none;
 }
 
 .logo.scrolled {
@@ -127,7 +123,7 @@ body {
 }
 
 #hamburgermenu {
-    display: flex;
+    display: none;
     justify-content: flex-end;
     flex-direction: column;
     align-items: flex-end;
@@ -219,7 +215,8 @@ a.scrolled {
 }
 
 #menu2 {
-    cursor: Default	;
+  display: none;
+  cursor: Default	;
 }
 
 
@@ -257,17 +254,6 @@ a.scrolled {
     justify-content: flex-start;
 }
 
-.textbox3 {
-    top: 0;
-    width: 100%;
-    height: 0;
-    background-color: #202020;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
 #imgGLWs {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -279,7 +265,7 @@ a.scrolled {
     text-align: justify;
 }
 
-#headinglabel {
+.headinglabel {
     width: 1200px;
     height: 80px;
     margin-bottom: 60px;
@@ -289,7 +275,6 @@ a.scrolled {
     font-weight: bold;
     display: flex;
     align-items: center;
-    
 }
 
 .headinglabel2 {
@@ -336,14 +321,8 @@ a.scrolled {
     width: 350px;
     margin-left: 40px;
     margin-right: 40px;
-    height: 500px;
+    height: 300px;
     background-color: none;
-}
-
-#mapblock.block {
-    height: 500px !important;
-    
-    z-index: 5 !important;
 }
 
 .text2 {
@@ -354,7 +333,6 @@ a.scrolled {
 }
 
 .headContact {
-    margin-top: 100px;
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -369,6 +347,14 @@ a.scrolled {
     margin-bottom: 40px;
 }
 
+#navbarcontid {
+      display: flex;
+    }
+    
+  #headingid {
+    display: none;
+  }
+
 .textContact {
     margin-top: 20px;
     font-size: 20px;
@@ -382,15 +368,7 @@ a.scrolled {
 
 .end {
     margin-top: 200px;
-    color: white;
-    width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top-style: solid;
-    border-top-color: white;
-    padding-top: 8px;
-
+   color: white;
 }
 
 #line {
@@ -407,22 +385,29 @@ a.scrolled {
 }
 
 ::-webkit-scrollbar {
-    background: #000000;
-    width: 20px;
-    outline: 1px solid slategrey;
-    height: 5px;
-}
-::-webkit-scrollbar-thumb {
-
     width: 15px;
-    background: linear-gradient(to right, #000000 0%, #333333 100% );
+    background: #000000;
     border-style: solid;
     border-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 20px;
+    background: linear-gradient(to right, #000000 0%, #333333 100% );
+    
+    width: 5px;
+    outline: 1px solid slategrey;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #696969; 
   }
+
+.loadImg {
+    background-image: url("giryLogoSmallW.png");
+    display: none;
+}
 
 @media only screen and (max-width: 1200px) {
     html, body {
@@ -430,8 +415,9 @@ a.scrolled {
         overflow-x: hidden !important;
     }
 
-    ::-webkit-scrollbar {
-        display: none;
+    #animation {
+      height: 0px;
+      width: 0px;
     }
 
     #box {
@@ -447,9 +433,14 @@ a.scrolled {
     .navbarcont {
         top: 0;
         width: 100%;
+        transform: translate(0,0)
+        
     }
 
     
+
+
+
     #navbarcontid.change {
         height: 230px;
 
@@ -457,10 +448,12 @@ a.scrolled {
 
     .heading {
         width: 100%;
+        height: 0px;
         
     }
 
     #hamburgermenu {
+        display: flex;
         margin-right: 10px;
     }
 
@@ -469,6 +462,10 @@ a.scrolled {
         margin-right: 10px;
     }
 
+    #logoid {
+      display: flex;
+    }
+    
     #menu {
         display: none;
     }
@@ -592,14 +589,12 @@ a.scrolled {
         
     }
 
-    #contact.textbox3 {
-        padding-top: 0px;
+    #contact.textbox {
+        padding-top: 120px;
         height: 950px;
         
     }
     #blockbox {
-        top: 0;
-        margin-top: 100px;
         display: flex;
         flex-direction: column;
         height: 1000px;
