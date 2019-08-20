@@ -49,6 +49,7 @@ var width = document.documentElement.clientWidth
                     document.getElementById('animation').style.width= width + "px";
                     ani()
                 } else {
+                    toggle()
                     document.getElementById('animation').style.display = "none";
                 }
                 function ani(){

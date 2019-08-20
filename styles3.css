@@ -295,6 +295,13 @@ a.scrolled {
     height: 3000px;
 }
 
+#projectImgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
 .textbox2 {
     width: 1200px;
     height: 0px;
@@ -329,7 +336,7 @@ a.scrolled {
     color: black;
     width: 1200px;
     text-align: justify;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 
 .headContact {
@@ -547,7 +554,7 @@ a.scrolled {
     }
 
     #about.textbox{
-        height: 1000px;
+        height: 800px;
     }
     .headinglabel {
         width: 100%;
@@ -570,6 +577,24 @@ a.scrolled {
       
     }
 
+    #projectImgs {
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    #pImg {
+        width: 300px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    #pImg2 {
+        width: 120px;
+        height: 60px;
+    }
+
+
     .textbox2{
         height: max-content;
     }
@@ -578,7 +603,7 @@ a.scrolled {
         width: 90%;
         margin: 0px;
         padding: 0;
-        height: 600px;
+        height: 700px;
     }
 
     #contact {
