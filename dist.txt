@@ -1,0 +1,12 @@
+ index.html
+script.js
+styles3.css
+jquery-3.4.1.min.js
+
+eu2.png
+giryAbout.png
+giryAnimation.png
+giryLogoSmall.png
+giryLogoSmallW.png
+ministerstvo3.png
+titleLogo.png
