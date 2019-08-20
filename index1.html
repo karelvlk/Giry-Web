@@ -1,0 +1,28 @@
+<head>
+
+    <title>Giry</title>
+    <meta http-equiv="Content-Type"  content="text/html; charset=utf8" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <script>
+        
+        function getPageHeight() {
+            var height = document.documentElement.clientHeight;
+            console.log(height +"px");
+            document.getElementById('div1').style.height= height + "px";
+        }
+    </script>
+    
+   </head>
+   
+  
+   <body onload="getPageHeight()">
+      <div id="div1"></div>
+      <div id="div2"></div>
+      <div id="div3"></div>
+   </body>
+  </html>
+  

@@ -1,28 +1,94 @@
-<head>
+<html>
+    <head>
 
-    <title>Giry</title>
-    <meta http-equiv="Content-Type"  content="text/html; charset=utf8" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <script>
-        
-        function getPageHeight() {
-            var height = document.documentElement.clientHeight;
-            console.log(height +"px");
-            document.getElementById('div1').style.height= height + "px";
-        }
-    </script>
-    
-   </head>
+        <title>Giry</title>
+        <link rel = "shortcut icon" href = "titleLogo.png" />
+        <meta http-equiv="Content-Type"  content="text/html; charset=utf8" />
+        <link href="styles3.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" />
+        <meta name="format-detection" content="telephone=no">
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="script.js">
+        </script>
+    </head>
    
   
-   <body onload="getPageHeight()">
-      <div id="div1"></div>
-      <div id="div2"></div>
-      <div id="div3"></div>
-   </body>
-  </html>
-  
+    <body onload="getPageHeight()">
+        <div id="animation">
+            <div id="logoanimation"></div>
+            <div id="textAnimation">GIRY SYSTEM</div>
+        </div>
+        <div class="navbarcont" id="navbarcontid">
+                <div class="heading">
+                        <div class="logo" id="logoid"></div>
+                        <div id="links2">
+                            <a href="#about"><div class="link" onClick="scroll()">O NÁS</div></a>
+                            <a href="#projects"><div class="link" onClick="scroll()">PROJEKTY</div></a>
+                            <a href="#contact"><div class="link" onClick="scroll()">KONTAKT</div></a>
+                        </div>
+                        <div class="link" id="menu2">MENU</div>
+                        <div id="hamburgermenu" onclick="menu3()">
+                            <div class="bar" id="bar1"></div>
+                            <div class="bar" id="bar2"></div>
+                            <div class="bar" id="bar3"></div>
+                        </div>
+                </div>
+        </div>
+
+
+        <div id="links">
+            <a href="#about"><div class="link" onClick="toggle()">O NÁS</div></a>
+            <a href="#projects"><div class="link" onClick="toggle()">PROJEKTY</div></a>
+            <a href="#contact"><div class="link" onClick="toggle()">KONTAKT</div></a>
+        </div>
+        <div id="box">
+            <div id="about" class="textbox">
+                <img id="imgGLWs" src="giryAbout.png">
+                <div class="text">Společnost GIRY System s.r.o. se zaměřuje na výzkum a vývoj v oblasti zpracování dat laserového skenování a panoramatického snímkování a pro tuto oblast vyvíjí vlastní SW nástroje a aplikace pro práci s 3D daty.</div>
+            </div>
+            <div id="projects">
+                <div id="1" class="textbox2">
+                        <div class="headinglabel">PROJEKTY</div>
+                        <div class="text2">
+                            Naše společnost získala dotaci od Ministerstva průmyslu a obchodu v rámci operačního programu PIK ICT na realizaci projektu s názvem „Aplikace a služby pro práci s mračnem bodů“, Registrační číslo projektu: CZ.01.4.04/0.0/0.0/16_066/0009349 <br><br>
+                            <h2>Cíl projektu:</h2>  Vytvoření sady SW komponent, knihoven, služeb a aplikací pro pokrytí komplexní podpory zpracování, analýzy a vizualizace prostorových dat, zejména mračna bodů, 3D objektů a sférických fotografií. Jednotlivé moduly sady jsou navržené tak, aby byly na koncového uživatele kladeny co nejmenší nároky na potřebné znalosti a dostupnost výkonného HW a SW, které jsou v současnosti pro práci a využití tohoto typu dat vyžadovány. Jednotlivé služby a aplikace budou dostupné v rámci cloudu a jsou navržené pro běh v prostředí webového prohlížeče, tedy bez nutnosti jakékoliv instalace a přípravy koncového zařízení před jejich použitím.
+                            <div id="projectImgs">
+                                <img id="pImg" src="eu2.png">
+                                <img id="pImg2" src="ministerstvo3.png">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+            <div id="contact" class="textbox">
+                <div id=portC></div>
+                <div id="blockbox">
+                    <div class="block">
+                        <div class="headContact"><i class="far fa-building"></i></div>
+                        <div class="textContact"> IČO: &emsp; 05548411 </div>
+                        <div class="textContact"> DIČ: CZ05548411 </div>
+                        <div class="textContact"><i class="fas fa-money-check-alt"></i>&ensp;221659052/0600</div>
+                    </div>
+                    <div class="block">
+                        <div class="headContact"><i class="fas fa-map-marked-alt"></i></div>
+                        <div class="textContact"> GIRY System s.r.o. </div>
+                        <div class="textContact"> Denisova 1526/10 </div>
+                        <div class="textContact"> 787 01 Šumperk  </div>
+                    </div>
+                    <div class="block">
+                        <div class="headContact"><i class="far fa-address-book"></i></div>
+                        <div class="textContact"> Ing. Pavel Sedlář </div>
+                        <div class="textContact"><i class="fas fa-mobile-alt"></i> &emsp; +420 603 496 850 &emsp; &ensp;  </div>
+                        <div class="textContact"><i class="far fa-envelope"></i> &ensp; sedlar[zavináč]giry.cz  </div>
+                    </div>
+                </div>
+                <div class="end">Giry 2019 ©</div>
+                <div id="line"></div>
+                <div class="loadImg"></div>
+            </div>
+        </div>
+    </body>
+</html>
