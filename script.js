@@ -56,18 +56,7 @@ var width = document.documentElement.clientWidth
                 }
 
                 console.log(height +"px");
-                if (width > 1200) {
-                    
-                    document.getElementById('animation').style.display = "flex";
-                    document.getElementById('about').style.height= height + "px";
-                    document.getElementById('projects').style.height= height + "px";
-                    document.getElementById('contact').style.height= height + "px";
-                    document.getElementById('animation').style.height= heightcanvas + "px";
-                    document.getElementById('animation').style.width= width + "px";
-                    ani()
-                } else {
-                    document.getElementById('animation').style.display = "none";
-                }
+                
                 function ani(){
                   
                     setTimeout(
