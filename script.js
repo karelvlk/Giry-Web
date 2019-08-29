@@ -7,7 +7,21 @@ var width = document.documentElement.clientWidth
                 console.log(height)
                 heightcanvas = height
                 height = height - 100;
-                  
+
+                console.log(height +"px");
+                if (width > 1200) {
+                    menu3()
+                    document.getElementById('animation').style.display = "flex";
+                    document.getElementById('about').style.height= height + "px";
+                    document.getElementById('projects').style.height= height + "px";
+                    document.getElementById('contact').style.height= height + "px";
+                    document.getElementById('animation').style.height= heightcanvas + "px";
+                    document.getElementById('animation').style.width= width + "px";
+                    ani()
+                } else {
+                    document.getElementById('animation').style.display = "none";
+                }
+
                 if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
                 {
                     console.log('Opera');
@@ -30,8 +44,11 @@ var width = document.documentElement.clientWidth
                     
                 document.getElementById('animation').style.right = 0
                 document.getElementById('navbarcontid').style.display = "none";
-                
-                
+                var body = document.getElementsByTagName('body')[0];
+                body.style.fontFamily='Verdana, Geneva, sans-serif';
+                document.getElementById('projects').style.height= 1000 + "px";
+                document.getElementById('projects').style.alignItems= "flex-start";
+                document.getElementById('headinglabel').style.marginTop = "100px";
                 }  
                 else 
                 {
@@ -40,7 +57,7 @@ var width = document.documentElement.clientWidth
 
                 console.log(height +"px");
                 if (width > 1200) {
-                    menu3()
+                    
                     document.getElementById('animation').style.display = "flex";
                     document.getElementById('about').style.height= height + "px";
                     document.getElementById('projects').style.height= height + "px";
@@ -78,8 +95,7 @@ var width = document.documentElement.clientWidth
                 document.getElementById("bar2").classList.toggle("change");
                 document.getElementById("bar3").classList.toggle("change");
                 document.getElementById("navbarcontid").classList.toggle("change");
-                
-            
+                document.getElementById("about").classList.toggle("menu")
             }
 
             function animationChanges () {
